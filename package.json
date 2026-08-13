@@ -1,19 +1,14 @@
 {
-  "dependencies": {
-    "lucide-react": "^1.31.0"
-  },
-  "name": "restaurant_recommendation_system",
+  "name": "restaurant-recommendation-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "py -m uvicorn backend.main:app --reload",
+    "frontend": "npm --prefix frontend run dev"
+  },
   "devDependencies": {
     "concurrently": "^10.0.4"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  }
 }
