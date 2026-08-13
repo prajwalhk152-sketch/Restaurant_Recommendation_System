@@ -1,0 +1,13 @@
+{
+  "name": "restaurant-recommendation-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "uvicorn backend.main:app --reload",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
